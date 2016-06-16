@@ -72,6 +72,10 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ViewpagerIndecatorActivity.class);
         startActivity(intent);
     }
+    public void click5(View view) {
+        Intent intent = new Intent(this, ViewpagerIndecatorActivity.class);
+        startActivity(intent);
+    }
 
     class MyAdapter extends BaseAdapter {
 
