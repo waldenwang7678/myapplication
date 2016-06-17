@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         Button b1 = (Button) findViewById(R.id.bt1);
         Button b2 = (Button) findViewById(R.id.bt2);
 
-//        //布局方式
+//        //布局方式   
 //        LinearLayout.LayoutParams p0 = new LinearLayout.LayoutParams
 //                (LinearLayout.LayoutParams.FILL_PARENT,LinearLayout.LayoutParams.FILL_PARENT);
 //        this.setContentView(ml, p0);  //设置根布局
