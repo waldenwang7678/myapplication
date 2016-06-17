@@ -28,7 +28,7 @@ public class ViewPagerFragmentActivity extends FragmentActivity {
 
     private void initData() {
         //标题
-        titles = new String[]{"书籍", "dog", "融管家", "订单", "书籍","dog", "融管家"};
+        titles = new String[]{"书籍", "dog", "融管家", "订单", "书籍", "dog", "融管家"};
     }
 
     private void initView() {
@@ -55,10 +55,9 @@ public class ViewPagerFragmentActivity extends FragmentActivity {
         }
 
 
-
         @Override
         public Fragment getItem(int position) {
-            MyPagerFragment fragment=new MyPagerFragment(position);
+            MyPagerFragment fragment = new MyPagerFragment(position);
             return fragment;
         }
 
