@@ -33,16 +33,17 @@ public class ViewpagerIndecatorActivity extends Activity {
     }
 
     private void initdata() {
-        viewData=new ArrayList<View>();
-        titles = new String[]{"书籍","狗狗","融管家","订单","书籍",}; //标题
-        datas=new int[]{R.drawable.a,R.drawable.dog,R.drawable.share_app,R.drawable.biaoqing_07,R.drawable.a};//图片
+        viewData = new ArrayList<View>();
+        titles = new String[]{"书籍", "狗狗", "融管家", "订单", "书籍",}; //标题
+        datas = new int[]{R.drawable.a, R.drawable.dog, R.drawable.share_app, R.drawable.biaoqing_07, R.drawable.a};//图片
 
-        for (int i=0;i<datas.length;i++){
-            ImageView iv=new ImageView(this);
+        for (int i = 0; i < datas.length; i++) {
+            ImageView iv = new ImageView(this);
             iv.setImageResource(datas[i]);
             viewData.add(iv);
         }
     }
+
     private void initView() {
         tabs = (PagerSlidingTabStrip) findViewById(R.id.viewpage_tabs);
         tabs.setIndicatorColorResource(R.color.color_actionbar);
@@ -54,11 +55,12 @@ public class ViewpagerIndecatorActivity extends Activity {
         tabs.setTabPaddingLeftRight(this.getResources().getDimensionPixelSize(R.dimen.margin_12));
 
         vp = (ViewPager) findViewById(R.id.vp);
-        MyAdapter adapter=new MyAdapter();
+        MyAdapter adapter = new MyAdapter();
         vp.setAdapter(adapter);
         tabs.setViewPager(vp);
     }
-    class MyAdapter extends PagerAdapter{
+
+    class MyAdapter extends PagerAdapter {
         @Override
         public int getCount() {
             return datas.length;
@@ -66,12 +68,12 @@ public class ViewpagerIndecatorActivity extends Activity {
 
         @Override
         public boolean isViewFromObject(View view, Object object) {
-            return view==(View)object;
+            return view == (View) object;
         }
 
         @Override
         public Object instantiateItem(ViewGroup container, int position) {
-            View view=viewData.get(position);
+            View view = viewData.get(position);
             container.addView(view);
             return view;
         }
@@ -81,6 +83,7 @@ public class ViewpagerIndecatorActivity extends Activity {
 
             container.removeView(viewData.get(position));
         }
+
         @Override
         public CharSequence getPageTitle(int position) {
             return titles[position];
