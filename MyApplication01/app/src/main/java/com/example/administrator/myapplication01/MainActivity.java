@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
     public void click5(View view) {
-        Intent intent = new Intent(this, ViewpagerIndecatorActivity.class);
+        Intent intent = new Intent(this, ViewPagerFragmentActivity.class);
         startActivity(intent);
     }
 

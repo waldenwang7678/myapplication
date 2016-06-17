@@ -3,7 +3,7 @@
     package="com.example.administrator.myapplication01">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:name=".MyAplication"
@@ -19,10 +19,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:persistableMode="persistAcrossReboots"  android:name=".TActivity"/>
-        <activity android:persistableMode="persistAcrossReboots" android:name=".VollyTest"/>
-        <activity android:persistableMode="persistAcrossReboots" android:name=".webViewActivity"/>
-        <activity android:persistableMode="persistAcrossReboots" android:name=".ViewpagerIndecatorActivity"/>
+        <activity android:name=".TActivity" />
+        <activity android:name=".VollyTest" />
+        <activity android:name=".webViewActivity" />
+        <activity android:name=".ViewpagerIndecatorActivity" />
+        <activity android:name=".ViewPagerFragmentActivity" />
     </application>
 
 </manifest>
