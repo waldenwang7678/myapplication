@@ -1,15 +1,20 @@
 apply plugin: 'com.android.application'
-
+apply plugin: 'com.bugtags.library.plugin'
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.3"
 
     defaultConfig {
+        multiDexEnabled true
         applicationId "com.example.administrator.myapplication01"
         minSdkVersion 19
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
+        ndk {
+            // 设置支持的 SO 库构架
+            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64', 'mips', 'mips64'
+        }
     }
     buildTypes {
         release {
@@ -26,4 +31,19 @@ dependencies {
     compile 'com.squareup.dagger:dagger:1.2.1'
     compile 'com.squareup.okhttp:okhttp:2.0.0'
     compile files('D:/MyProject/MyApplication01/libs/volley.jar')
+   // classpath 'com.bugtags.library:bugtags-gradle:latest.integration'
+
+
+    compile 'com.bugtags.library:bugtags-lib:latest.integration'
+
+
+}
+bugtags {
+    //自动上传符号表功能配置，如果需要根据 build varint 配置，请参考插件详细使用说明
+    appKey "e0dd62b04fbad2d051eff53c2a116482"  //这里是你的 appKey
+    appSecret "b06edc4f49065619fb28c1aaa9672f9d"    //这里是你的 appSecret，管理员在设置页可以查看
+    mappingUploadEnabled true
+
+    //网络跟踪功能配置(企业版)
+    trackingNetworkEnabled true
 }

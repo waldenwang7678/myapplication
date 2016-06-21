@@ -13,7 +13,7 @@ import android.webkit.WebViewClient;
 /**
  * Created by Administrator on 2016/6/15 0015.
  */
-public class webViewActivity extends Activity {
+public class webViewActivity extends BaseActivity {
     String baidu="http://www.baidu.com";
     String baidu1="https://www.baidu.com/?tn=47018152_dg";
 

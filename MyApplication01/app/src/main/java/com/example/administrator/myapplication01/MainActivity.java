@@ -18,7 +18,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
     private List<String> datas = new ArrayList<String>();
     private Scroller scroller;
     private Button b1;
@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
 //        this.setContentView(ml, p0);  //设置根布局
 
         initdata();
+        View view;
         ListView lv = (ListView) findViewById(R.id.list);
         MyAdapter adapter = new MyAdapter();
         lv.setAdapter(adapter);

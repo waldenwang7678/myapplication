@@ -20,6 +20,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".TActivity" />
+        <activity android:name=".BaseActivity" />
         <activity android:name=".VollyTest" />
         <activity android:name=".webViewActivity" />
         <activity android:name=".ViewpagerIndecatorActivity" />

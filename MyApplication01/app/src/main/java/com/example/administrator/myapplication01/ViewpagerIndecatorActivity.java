@@ -15,7 +15,7 @@ import java.util.List;
 /**
  * Created by Administrator on 2016/6/16 0016.
  */
-public class ViewpagerIndecatorActivity extends Activity {
+public class ViewpagerIndecatorActivity extends BaseActivity {
     private int[] datas;
     private String[] titles;
     private PagerSlidingTabStrip tabs;

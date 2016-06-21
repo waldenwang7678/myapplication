@@ -9,6 +9,8 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 
+import com.bugtags.library.Bugtags;
+
 /**
  * Created by Administrator on 2016/6/17 0017.
  */
@@ -21,6 +23,7 @@ public class ViewPagerFragmentActivity extends FragmentActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+       Bugtags.onResume(this);
         setContentView(R.layout.viewpager_ind_layout);
         initData();
         initView();
