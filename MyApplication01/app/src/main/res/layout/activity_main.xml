@@ -24,6 +24,8 @@
             android:text="百度" />
 
         <Button
+            android:layout_marginLeft="20dp"
+            style="@style/My_buttom"
             android:id="@+id/bt2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -51,7 +53,7 @@
             android:text="VP" />
 
         <Button
-            style="@style/My_buttom"
+
             android:id="@+id/bt5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

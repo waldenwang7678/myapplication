@@ -15,6 +15,8 @@ import android.widget.ListView;
 import android.widget.Scroller;
 import android.widget.TextView;
 
+import com.umeng.analytics.MobclickAgent;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -57,11 +59,14 @@ public class MainActivity extends BaseActivity {
     public void click1(View view) {
         Intent intent = new Intent(this, webViewActivity.class);
         startActivity(intent);
+        //友盟统计
+        MobclickAgent.setScenarioType(this, MobclickAgent.EScenarioType.E_UM_NORMAL);
     }
 
     public void click2(View view) {
         Intent intent = new Intent(this, TActivity.class);
         startActivity(intent);
+        MobclickAgent.setScenarioType(this, MobclickAgent.EScenarioType.E_UM_NORMAL);
     }
 
     public void click3(View view) {

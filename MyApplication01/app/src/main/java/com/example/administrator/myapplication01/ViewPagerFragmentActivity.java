@@ -10,6 +10,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 
 import com.bugtags.library.Bugtags;
+import com.umeng.analytics.MobclickAgent;
 
 /**
  * Created by Administrator on 2016/6/17 0017.
@@ -23,7 +24,7 @@ public class ViewPagerFragmentActivity extends FragmentActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-       Bugtags.onResume(this);
+
         setContentView(R.layout.viewpager_ind_layout);
         initData();
         initView();
@@ -61,7 +62,8 @@ public class ViewPagerFragmentActivity extends FragmentActivity {
 
         @Override
         public Fragment getItem(int position) {
-            MyPagerFragment fragment=new MyPagerFragment(position);
+           // MyPagerFragment fragment=new MyPagerFragment(position);
+            MyPagerFragment fragment=MyPagerFragment.newInstance(position+"",null) ;
             return fragment;
         }
 
@@ -74,5 +76,19 @@ public class ViewPagerFragmentActivity extends FragmentActivity {
         public CharSequence getPageTitle(int position) {
             return titles[position];
         }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Bugtags.onResume(this);
+        MobclickAgent.onResume(this);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Bugtags.onPause(this);
+        MobclickAgent.onResume(this);
     }
 }
