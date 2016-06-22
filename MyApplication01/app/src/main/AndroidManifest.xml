@@ -13,33 +13,27 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
 
     <!--环信-->
+
     <uses-permission android:name="android.permission.VIBRATE" />
-
-    <uses-permission android:name="android.permission.INTERNET" />
-
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
-
     <uses-permission android:name="android.permission.CAMERA" />
-
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
-    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
-
+    <!--<uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />-->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-
     <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
-
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-
+    <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.GET_TASKS" />
-
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
-    <uses-permissiona android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
-    <uses-permissiona android:name="android.permission.READ_PHONE_STATE" />
+    <permission android:name="android.permission.BAIDU_LOCATION_SERVICE" />
+
+    <uses-permission android:name="android.permission.BAIDU_LOCATION_SERVICE" />
 
     <application
         android:name=".MyAplication"
@@ -61,6 +55,7 @@
         <activity android:name=".activity.webViewActivity" />
         <activity android:name=".activity.ViewpagerIndecatorActivity" />
         <activity android:name=".activity.ViewPagerFragmentActivity" />
+        <activity android:name=".huanxin.HuanxinActivity" />
 
         <!--<meta-data android:name="UMENG_CHANNEL" android:value="wandoujia" />-->
         <!--多渠道打包-->
@@ -71,17 +66,30 @@
         <meta-data
             android:name="UMENG_APPKEY"
             android:value="57690a2267e58e3c2b001507" />
-
         <!--环信-->
-        <!--应用标识(AppKey):	walden-wang#myaplication-->
-        <!--Client Id:	YXA6YytKQDgcEeaF05ULlKEHJw-->
-        <!--Client Secret:	YXA6S9ynhN2DUbBUDxjQRDnIMYXLsdU-->
+        <meta-data
+            android:name="EASEMOB_APPKEY"
+            android:value="walden-wang#myaplication" />
 
 
-        <meta-data android:name="EASEMOB_APPKEY" android:value="walden-wang#myaplication" />
+        <receiver android:name="com.easemob.chat.StartServiceReceiver">
+            <intent-filter android:priority="1">
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 声明sdk所需的service -->
+        <service android:name="com.easemob.chat.EMChatService" />
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+
     </application>
-
-
 
 
 </manifest>
