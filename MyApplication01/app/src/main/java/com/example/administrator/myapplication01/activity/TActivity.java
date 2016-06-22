@@ -1,4 +1,4 @@
-package com.example.administrator.myapplication01;
+package com.example.administrator.myapplication01.activity;
 
 import android.content.Context;
 import android.graphics.Color;

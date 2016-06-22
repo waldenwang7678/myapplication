@@ -1,14 +1,13 @@
-package com.example.administrator.myapplication01;
+package com.example.administrator.myapplication01.activity;
 
-import android.app.Activity;
 import android.graphics.Bitmap;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.view.View;
-import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+
+import com.example.administrator.myapplication01.R;
 
 /**
  * Created by Administrator on 2016/6/15 0015.

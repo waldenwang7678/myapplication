@@ -1,13 +1,14 @@
-package com.example.administrator.myapplication01;
+package com.example.administrator.myapplication01.activity;
 
-import android.app.Activity;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+
+import com.example.administrator.myapplication01.utile.PagerSlidingTabStrip;
+import com.example.administrator.myapplication01.R;
 
 import java.util.ArrayList;
 import java.util.List;

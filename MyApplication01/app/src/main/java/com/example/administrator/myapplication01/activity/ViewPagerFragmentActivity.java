@@ -1,8 +1,6 @@
-package com.example.administrator.myapplication01;
+package com.example.administrator.myapplication01.activity;
 
-import android.app.Activity;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
@@ -10,6 +8,9 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 
 import com.bugtags.library.Bugtags;
+import com.example.administrator.myapplication01.MyPagerFragment;
+import com.example.administrator.myapplication01.utile.PagerSlidingTabStrip;
+import com.example.administrator.myapplication01.R;
 import com.umeng.analytics.MobclickAgent;
 
 /**

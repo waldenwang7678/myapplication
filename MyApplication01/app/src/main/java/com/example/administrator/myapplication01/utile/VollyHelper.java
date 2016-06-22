@@ -1,4 +1,4 @@
-package com.example.administrator.myapplication01;
+package com.example.administrator.myapplication01.utile;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -10,6 +10,8 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.ImageRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.administrator.myapplication01.MyAplication;
+import com.example.administrator.myapplication01.R;
 
 import org.json.JSONObject;
 

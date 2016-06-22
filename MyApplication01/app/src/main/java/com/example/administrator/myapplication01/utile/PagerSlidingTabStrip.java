@@ -1,4 +1,4 @@
-package com.example.administrator.myapplication01;
+package com.example.administrator.myapplication01.utile;
 
 import java.util.Locale;
 
@@ -25,6 +25,7 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.example.administrator.myapplication01.R;
 
 
 public class PagerSlidingTabStrip extends HorizontalScrollView {

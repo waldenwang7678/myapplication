@@ -1,20 +1,18 @@
-package com.example.administrator.myapplication01;
+package com.example.administrator.myapplication01.activity;
 
-import android.content.Context;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+import android.graphics.Color;
 import android.os.Bundle;
-import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Scroller;
 import android.widget.TextView;
 
+import com.example.administrator.myapplication01.R;
 import com.umeng.analytics.MobclickAgent;
 
 import java.util.ArrayList;
@@ -70,7 +68,7 @@ public class MainActivity extends BaseActivity {
     }
 
     public void click3(View view) {
-        Intent intent = new Intent(this, VollyTest.class);
+        Intent intent = new Intent(this, VollyTestAvtivity.class);
         startActivity(intent);
     }
 
@@ -78,6 +76,7 @@ public class MainActivity extends BaseActivity {
         Intent intent = new Intent(this, ViewpagerIndecatorActivity.class);
         startActivity(intent);
     }
+
     public void click5(View view) {
         Intent intent = new Intent(this, ViewPagerFragmentActivity.class);
         startActivity(intent);
@@ -102,8 +101,16 @@ public class MainActivity extends BaseActivity {
 
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
+
+
             TextView tv = new TextView(MainActivity.this);
-            tv.setText(datas.get(position));
+            if(position==0){
+                tv.setText("进入环信");
+                tv.setTextSize(30);
+                tv.setBackgroundColor(Color.parseColor("#CEFFC2"));
+            }else{
+                tv.setText(datas.get(position));
+            }
             tv.setTextSize(20);
             return tv;
         }

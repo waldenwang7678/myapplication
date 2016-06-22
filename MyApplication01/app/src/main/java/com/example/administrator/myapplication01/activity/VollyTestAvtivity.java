@@ -1,19 +1,17 @@
-package com.example.administrator.myapplication01;
+package com.example.administrator.myapplication01.activity;
 
 import android.app.Activity;
-import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.android.volley.RequestQueue;
-import com.android.volley.toolbox.ImageLoader;
-import com.android.volley.toolbox.Volley;
+import com.example.administrator.myapplication01.R;
+import com.example.administrator.myapplication01.utile.VollyHelper;
 
 /**
  * Created by Administrator on 2016/6/15 0015.
  */
-public class VollyTest extends Activity {
+public class VollyTestAvtivity extends Activity {
    // private  RequestQueue requestQueue = Volley.newRequestQueue(this, null);
    private ImageView iv;
     @Override
