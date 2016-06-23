@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import com.example.administrator.myapplication01.utile.PagerSlidingTabStrip;
+import com.example.administrator.myapplication01.util.PagerSlidingTabStrip;
 import com.example.administrator.myapplication01.R;
 
 import java.util.ArrayList;

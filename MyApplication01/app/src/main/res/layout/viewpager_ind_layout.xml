@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent">
-    <com.example.administrator.myapplication01.utile.PagerSlidingTabStrip
+    <com.example.administrator.myapplication01.util.PagerSlidingTabStrip
         android:id="@+id/viewpage_tabs"
         android:layout_width="match_parent"
         android:layout_height="40dp"

@@ -56,6 +56,8 @@
         <activity android:name=".activity.ViewpagerIndecatorActivity" />
         <activity android:name=".activity.ViewPagerFragmentActivity" />
         <activity android:name=".huanxin.HuanxinActivity" />
+        <activity android:name=".huanxin.UserChatActivity" />
+        <activity android:name=".huanxin.RegesterActivity" />
 
         <!--<meta-data android:name="UMENG_CHANNEL" android:value="wandoujia" />-->
         <!--多渠道打包-->
@@ -66,28 +68,31 @@
         <meta-data
             android:name="UMENG_APPKEY"
             android:value="57690a2267e58e3c2b001507" />
-        <!--环信-->
+
+
+
+        <!--环信key-->
         <meta-data
             android:name="EASEMOB_APPKEY"
             android:value="walden-wang#myaplication" />
-
-
-        <receiver android:name="com.easemob.chat.StartServiceReceiver">
-            <intent-filter android:priority="1">
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
-                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
+        <!--开启的服务-->
+        <service android:name="com.hyphenate.chat.EMChatService" android:exported="true"/>
+        <!-- 声明SDK所需的receiver -->
+        <receiver android:name="com.hyphenate.chat.EMMonitorReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+            <!-- 可选filter -->
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.USER_PRESENT" />
             </intent-filter>
         </receiver>
 
-        <!-- 声明sdk所需的service -->
-        <service android:name="com.easemob.chat.EMChatService" />
 
-        <service
-            android:name="com.baidu.location.f"
-            android:enabled="true"
-            android:process=":remote" />
+
+
 
     </application>
 

@@ -5,6 +5,8 @@ import android.util.Log;
 
 import com.bugtags.library.Bugtags;
 //import com.easemob.chat.EMChat;
+import com.hyphenate.chat.EMClient;
+import com.hyphenate.chat.EMOptions;
 import com.umeng.analytics.MobclickAgent;
 
 /**
@@ -22,12 +24,15 @@ public class MyAplication extends Application {
         Bugtags.start("e0dd62b04fbad2d051eff53c2a116482", this, Bugtags.BTGInvocationEventBubble);
         //初始化友盟
         MobclickAgent.setScenarioType(this, MobclickAgent.EScenarioType.E_UM_NORMAL);
-        //初始化环信
-//        Log.d("EMChat Demo", "initialize EMChat SDK");
-//        EMChat.getInstance().init(getApplicationContext());
-//        // debugmode设为true后，就能看到sdk打印的log了
-//        EMChat.getInstance().setDebugMode(true);
 
+
+        EMOptions options = new EMOptions();
+// 默认添加好友时，是不需要验证的，改成需要验证
+        options.setAcceptInvitationAlways(false);
+//初始化
+        EMClient.getInstance().init(getApplicationContext(), options);
+//在做打包混淆时，关闭debug模式，避免消耗不必要的资源
+        EMClient.getInstance().setDebugMode(false);
 
     }
 

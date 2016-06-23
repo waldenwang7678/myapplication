@@ -1,5 +1,6 @@
 package com.example.administrator.myapplication01.activity;
 
+import android.app.Activity;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
@@ -21,7 +22,7 @@ import java.security.Policy;
 /**
  * Created by Administrator on 2016/6/15 0015.
  */
-public class TActivity extends AppCompatActivity implements View.OnClickListener{
+public class TActivity extends Activity implements View.OnClickListener{
 
     private static final String TAG = "TestScrollerActivity";
     private Scroller scroller;

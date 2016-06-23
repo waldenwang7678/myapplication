@@ -11,22 +11,28 @@ android {
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
+
+
         ndk {
             // 设置支持的 SO 库构架
             abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64', 'mips', 'mips64'
         }
 
-       // manifestPlaceholders = [UMENG_CHANNEL_VALUE: "default_channel"]
+        // manifestPlaceholders = [UMENG_CHANNEL_VALUE: "default_channel"]
 
     }
+
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    configurations {
+        all*.exclude group: 'com.android.support', module: 'support-v4'
+    }
     productFlavors {
-        hahah{}
+        hahah {}
         wandoujia {}
         baidu {}
         c360 {}
@@ -46,14 +52,10 @@ dependencies {
     compile 'com.squareup.dagger:dagger:1.2.1'
     compile 'com.squareup.okhttp:okhttp:2.0.0'
     compile files('D:/MyProject/MyApplication01/libs/volley.jar')
-    // classpath 'com.bugtags.library:bugtags-gradle:latest.integration'
     compile 'com.bugtags.library:bugtags-lib:latest.integration'
     compile 'com.umeng.analytics:analytics:latest.integration'
     compile 'com.squareup.picasso:picasso:2.3.2'
-    compile files('D:/myproject/MyApplication01/libs/locSDK_3.3.jar')
-    compile files('D:/myproject/MyApplication01/libs/baidumapapi_v3_2_0.jar')
-    compile files('D:/myproject/MyApplication01/libs/BaiduLBS_Android.jar')
-    compile files('D:/myproject/MyApplication01/libs/hyphenatechat_3.1.3.jar')
+    compile project(':easeui')
 }
 bugtags {
     //自动上传符号表功能配置，如果需要根据 build varint 配置，请参考插件详细使用说明
