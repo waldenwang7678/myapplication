@@ -62,22 +62,19 @@ public class HuanxinActivity extends Activity implements View.OnClickListener {
                 if (isLogin) {
                     //跳转用聊天页面
                     Log.i("main", "登陆成功,页面跳转");
-                    Intent intent=new Intent(HuanxinActivity.this,UserChatActivity.class);
+                    Intent intent = new Intent(HuanxinActivity.this, UserChatActivity.class);
                     startActivity(intent);
                 }
                 break;
             case R.id.register:
-                Intent intent=new Intent(HuanxinActivity.this,RegesterActivity.class);
+                Intent intent = new Intent(HuanxinActivity.this, RegesterActivity.class);
                 startActivity(intent);
                 break;
             case R.id.del_login_info:
                 username.setText("");
                 pwd.setText("");
-                try {
-                    Tool.logout(HuanxinActivity.this);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
+
+                Tool.logout(HuanxinActivity.this);
 
 
                 break;
