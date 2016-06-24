@@ -11,6 +11,13 @@
     <color name="reg">#aad152</color>
     <color name="reg0">#aad152</color>
     <color name="reg1">#aaa152</color>
+    <color name="color_66">#666666</color>
+    <color name="pure_white">#FFFFFF</color>
+    <color name="common_bottom_bar_normal_bg">#2d2f31</color>
+    <color name="common_bottom_bar_selected_bg">#161718</color>
+    <color name="common_botton_bar_blue">#2ea7e0</color>
+    <color name="bottom_bar_normal_bg">#2D2F31</color>
 
+    <color name="common_top_bar_blue">#4ebcd3</color>
 
 </resources>

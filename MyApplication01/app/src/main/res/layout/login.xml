@@ -56,11 +56,4 @@
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/del_login_info"
-        android:layout_marginTop="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:text="清空登录信息" />
 </LinearLayout>

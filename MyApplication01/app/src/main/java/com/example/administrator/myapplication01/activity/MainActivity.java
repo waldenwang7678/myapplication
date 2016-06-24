@@ -14,9 +14,10 @@ import android.widget.Scroller;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.administrator.myapplication01.huanxin.HuanxinActivity;
+import com.example.administrator.myapplication01.huanxin.LoginActivity;
 import com.example.administrator.myapplication01.R;
-import com.umeng.analytics.MobclickAgent;
+import com.example.administrator.myapplication01.huanxin.UserChatActivity;
+import com.hyphenate.chat.EMClient;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -60,7 +61,13 @@ public class MainActivity extends BaseActivity {
                 Class clazz = null;
                 switch (position) {
                     case 0:
-                        clazz = HuanxinActivity.class;
+                        //如果之前登陆过,直接跳转到聊天页
+                        if(EMClient.getInstance().isLoggedInBefore()){
+                            clazz= UserChatActivity.class;
+                        }else{
+                            clazz = LoginActivity.class;
+                        }
+
                         break;
                     case 1:
 
