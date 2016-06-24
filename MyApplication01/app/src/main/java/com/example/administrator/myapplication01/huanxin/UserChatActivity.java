@@ -37,8 +37,6 @@ public class UserChatActivity extends Activity implements View.OnClickListener {
         user_chat_fg = (FrameLayout) findViewById(R.id.user_chat_fg);
 
 
-
-
     }
 
     @Override
