@@ -12,5 +12,17 @@
         <!--<item name="android:df">#CEFFC2</item>-->
         <!--<item name="android:df">#CEFFC2</item>-->
     </style>
+    <!-- 底部导航卡栏RadioButton样式 -->
+    <!--<style name="home_tab_bottom">-->
+        <!--<item name="android:gravity">center</item>-->
+        <!--<item name="android:paddingTop">4dp</item>-->
+        <!--<item name="android:layout_width">wrap_content</item>-->
+        <!--<item name="android:layout_height">wrap_content</item>-->
+        <!--<item name="android:button">@null</item>-->
+        <!--<item name="android:layout_weight">1.0</item>-->
+        <!--<item name="android:textSize">@dimen/size_12</item>-->
+        <!--<item name="android:drawablePadding">2dp</item>-->
+        <!--<item name="android:textColor">@color/home_tab_radiobtn_txt_selector</item>-->
+    <!--</style>-->
 
 </resources>

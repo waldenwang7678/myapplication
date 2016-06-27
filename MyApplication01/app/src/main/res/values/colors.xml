@@ -20,4 +20,6 @@
 
     <color name="common_top_bar_blue">#4ebcd3</color>
 
+    <color name="color_actionbar_gray">#505050</color>
+
 </resources>

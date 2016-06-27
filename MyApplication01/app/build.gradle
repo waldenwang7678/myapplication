@@ -56,6 +56,7 @@ dependencies {
     compile 'com.umeng.analytics:analytics:latest.integration'
     compile 'com.squareup.picasso:picasso:2.3.2'
     compile project(':easeui')
+    compile 'com.squareup.retrofit2:retrofit:2.0.2'
 }
 bugtags {
     //自动上传符号表功能配置，如果需要根据 build varint 配置，请参考插件详细使用说明

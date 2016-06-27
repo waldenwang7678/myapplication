@@ -1,13 +1,12 @@
 package com.example.administrator.myapplication01;
 
 import android.app.Application;
-import android.util.Log;
 
-import com.bugtags.library.Bugtags;
-//import com.easemob.chat.EMChat;
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.chat.EMOptions;
 import com.umeng.analytics.MobclickAgent;
+
+//import com.easemob.chat.EMChat;
 
 /**
  * Created by Administrator on 2016/6/15 0015.
@@ -21,7 +20,7 @@ public class MyAplication extends Application {
         super.onCreate();
         instance = this;
         //初始化BugTag
-        Bugtags.start("e0dd62b04fbad2d051eff53c2a116482", this, Bugtags.BTGInvocationEventBubble);
+      //  Bugtags.start("e0dd62b04fbad2d051eff53c2a116482", this, Bugtags.BTGInvocationEventBubble);
         //初始化友盟
         MobclickAgent.setScenarioType(this, MobclickAgent.EScenarioType.E_UM_NORMAL);
 
