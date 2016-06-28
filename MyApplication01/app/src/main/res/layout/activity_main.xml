@@ -20,7 +20,7 @@
             android:id="@+id/bt1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="click1"
+            android:onClick="click"
             android:text="百度" />
 
         <Button
@@ -29,7 +29,7 @@
             android:id="@+id/bt2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="click2"
+            android:onClick="click"
             android:text="滑动" />
     </LinearLayout>
 
@@ -42,14 +42,14 @@
             android:id="@+id/bt3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="click3"
+            android:onClick="click"
             android:text="图片加载" />
 
         <Button
             android:id="@+id/bt4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="click4"
+            android:onClick="click"
             android:text="VP" />
 
         <Button
@@ -57,12 +57,14 @@
             android:id="@+id/bt5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="click5"
+            android:onClick="click"
             android:text="VPfragment" />
     </LinearLayout>
 
 
     <ListView
+        android:divider="@color/app_yellow_color"
+        android:dividerHeight="@dimen/listview_divideline"
         android:id="@+id/list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />

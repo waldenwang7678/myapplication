@@ -16,7 +16,6 @@ import com.example.administrator.myapplication01.activity.MainActivity;
 import com.example.administrator.myapplication01.fragment.FirFragment;
 import com.example.administrator.myapplication01.fragment.SecFragment;
 import com.example.administrator.myapplication01.fragment.SettingFragment;
-import com.example.administrator.myapplication01.util.Util;
 
 /**
  * Created by Administrator on 2016/6/23 0023.
@@ -30,7 +29,7 @@ public class UserChatActivity extends FragmentActivity implements View.OnClickLi
     SparseArray<Fragment> fragments = new SparseArray<Fragment>();
     private FragmentManager fragmentManager;
     private FragmentTransaction transaction;
-
+    private int flag=R.id.btn_conversation;
     public UserChatActivity() {
     }
 
@@ -52,6 +51,8 @@ public class UserChatActivity extends FragmentActivity implements View.OnClickLi
         fragmentManager = getSupportFragmentManager();
         transaction = fragmentManager.beginTransaction();
         firFragment = new FirFragment();
+        cacheFragment=firFragment;
+
         transaction.add(R.id.user_chat_fg, firFragment).commit();
 
 
@@ -64,14 +65,24 @@ public class UserChatActivity extends FragmentActivity implements View.OnClickLi
 
     }
 
+    /**
+     * 优化方法:
+     * 1,使用add.hide.show方法减少fragment对象的创建
+     * 2,使用flag判断 , 避免多次点击同一个按钮hide 和show方法重复执行
+     * @param v
+     */
     @Override
     public void onClick(View v) {
+        int id=v.getId();
+        if(flag==id){
+            return;
+        }
         if (cacheFragment != null) {
             transaction = fragmentManager.beginTransaction();
             transaction.hide(cacheFragment).commit();
         }
         transaction = fragmentManager.beginTransaction();
-        switch (v.getId()) {
+        switch (id) {
             case R.id.btn_conversation:
                 if (firFragment == null) {
                     firFragment = new FirFragment();
@@ -80,6 +91,7 @@ public class UserChatActivity extends FragmentActivity implements View.OnClickLi
                     transaction.show(firFragment);
                 }
                 cacheFragment = firFragment;
+                flag=R.id.btn_conversation;
                 break;
             case R.id.btn_address_list:
                 if (secFragment == null) {
@@ -89,6 +101,7 @@ public class UserChatActivity extends FragmentActivity implements View.OnClickLi
                     transaction.show(secFragment);
                 }
                 cacheFragment = secFragment;
+                flag=R.id.btn_address_list;
                 break;
             case R.id.btn_setting:
                 if (settingFragment == null) {
@@ -98,6 +111,7 @@ public class UserChatActivity extends FragmentActivity implements View.OnClickLi
                     transaction.show(settingFragment);
                 }
                 cacheFragment = settingFragment;
+                flag=R.id.btn_setting;
                 break;
 
         }
