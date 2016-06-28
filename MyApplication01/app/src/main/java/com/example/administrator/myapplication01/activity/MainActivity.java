@@ -55,18 +55,17 @@ public class MainActivity extends BaseActivity {
                 switch (position) {
                     case 0:
                         //如果之前登陆过,直接跳转到聊天页
-                        if(EMClient.getInstance().isLoggedInBefore()){
-                            clazz= UserChatActivity.class;
-                        }else{
+                        if (EMClient.getInstance().isLoggedInBefore()) {
+                            clazz = UserChatActivity.class;
+                        } else {
                             clazz = LoginActivity.class;
                         }
-
                         break;
                     case 1:
-                        clazz=SearchActivity.class;
+                        clazz = SearchActivity.class;
                         break;
                     case 2:
-
+                        clazz = ColorRing.class;
                         break;
                     case 3:
 
@@ -140,20 +139,21 @@ public class MainActivity extends BaseActivity {
 
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
-
-
             TextView tv = new TextView(MainActivity.this);
             if (position == 0) {
                 tv.setText("进入环信");
-                tv.setTextSize(30);
                 tv.setBackgroundColor(Color.parseColor("#CEFFC2"));
-            } else if(position==1){
+            } else if (position == 1) {
                 tv.setText("dogSearch");
 
-            }else {
+            } else if (position == 2) {
+                tv.setText("ColorRing");
+
+            } else {
                 tv.setText(datas.get(position));
             }
-            tv.setTextSize(20);
+            tv.setTextSize(30);
+
             return tv;
         }
 
