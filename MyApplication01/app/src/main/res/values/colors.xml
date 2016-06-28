@@ -22,4 +22,26 @@
 
     <color name="color_actionbar_gray">#505050</color>
 
+
+
+    <color name="write_tranlate">#eeeeee</color>
+    <color name="black_tranlate">#000000</color>
+    <color name="txt_top_color">#272636</color>
+    <color name="line_top_gray">#c8c7cc</color>
+    <color name="txt_dogapter_top_tab">#9d9d9d</color>
+    <color name="gray_main_bg">#f2f2f2</color> <!-- 浅灰背景色 -->
+    <color name="white">#FFFFFF</color>
+    <color name="gray_tab_btn">#999999</color> <!-- 字体浅灰色 -->
+    <color name="gray_textview_color">#666666</color> <!-- 字体灰色 -->
+    <color name="gray">#cccccc</color>
+    <color name="bg_top_title_color">#FEB786</color>
+    <color name="bg_serach_txt_bg">#f4f4f4</color>
+    <color name="txt_color_bg">#272636</color>
+    <color name="view_tab_top">#ffad75</color>
+    <color name="gray_line">#c8c7cc</color>
+    <color name="app_yellow_color">#fbaa73</color>
+    <color name="txt_month_bg">#272636</color>
+    <color name="translat_black">#88000000</color>
+    <color name="black">#000000</color>
+
 </resources>

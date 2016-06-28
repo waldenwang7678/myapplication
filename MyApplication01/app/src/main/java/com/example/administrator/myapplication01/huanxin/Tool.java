@@ -1,12 +1,10 @@
 package com.example.administrator.myapplication01.huanxin;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.example.administrator.myapplication01.activity.MainActivity;
 import com.example.administrator.myapplication01.util.MyDialog;
 import com.example.administrator.myapplication01.util.Util;
 import com.hyphenate.EMCallBack;
@@ -32,7 +30,9 @@ public class Tool {
      */
     public static void regester(final String name, final String pwd, Activity activity) {
         mContext = activity;
-        md = MyDialog.show(activity, "正在注册...");
+        if (!activity.isFinishing()) {
+            md = MyDialog.show(activity, "正在注册...");
+        }
         new Thread(new Runnable() {  //注册时同步方法,而且访问网络,需要放在子线程中
             public void run() {
                 try {
@@ -78,7 +78,10 @@ public class Tool {
      */
     public static void login(final String count, final String pwd, Activity activity) {
         mContext = activity;
-        md = MyDialog.show(activity, "正在登录...");
+        if (!activity.isFinishing()) {
+            md = MyDialog.show(activity, "正在登录...");
+        }
+
         EMClient.getInstance().login(count, pwd, new EMCallBack() {//回调的三个方法都在子线程中执行  方法异步
             @Override
             public void onSuccess() {
@@ -126,7 +129,9 @@ public class Tool {
      * @param context
      */
     public static void logout(final Activity context) {
-        md = MyDialog.show(context, "正在退出...");
+        if (!context.isFinishing()) {
+            md = MyDialog.show(context, "正在退出...");
+        }
         EMClient.getInstance().logout(true);
         Intent intent = new Intent(context, LoginActivity.class);
         context.startActivity(intent);

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        layout="@layout/include_title_top_bar" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:background="@color/gray_line" />
+
+    <LinearLayout
+        android:id="@+id/lin_searchshow_shaixuan"
+        android:layout_width="fill_parent"
+        android:layout_height="38dip"
+        android:background="@drawable/img_bg_dogshow_tab"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/rel_search_price"
+            android:layout_width="0dip"
+            android:layout_height="38dip"
+            android:layout_weight="1"
+            android:gravity="center_horizontal|center_vertical" >
+
+            <TextView
+                android:id="@+id/txt_price_show"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="综合排序"
+                android:textColor="@color/txt_color_bg" />
+
+            <ImageView
+                android:id="@+id/imageview1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="3dp"
+                android:layout_toRightOf="@id/txt_price_show"
+                android:background="@drawable/icon_jiantou2" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="1dip"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="5dip"
+            android:layout_marginTop="5dip"
+            android:background="@color/gray_line" />
+
+        <RelativeLayout
+            android:id="@+id/rel_searchshow_shaixuan"
+            android:layout_width="0dip"
+            android:layout_height="38dip"
+            android:layout_weight="1"
+            android:gravity="center_horizontal|center_vertical" >
+
+            <TextView
+                android:id="@+id/txt_shaixuan_show"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="筛选"
+                android:textColor="@color/txt_color_bg" />
+
+            <ImageView
+                android:id="@+id/imageview2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/txt_shaixuan_show"
+                android:background="@drawable/icon_jiantou2" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:background="@color/gray_line" />
+
+    <ListView
+        android:id="@+id/listview_searchshow_pic"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+    </ListView>
+    
+
+</LinearLayout>

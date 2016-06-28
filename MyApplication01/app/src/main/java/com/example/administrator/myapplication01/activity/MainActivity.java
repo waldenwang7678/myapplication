@@ -34,11 +34,6 @@ public class MainActivity extends BaseActivity {
         Button b1 = (Button) findViewById(R.id.bt1);
         Button b2 = (Button) findViewById(R.id.bt2);
 
-//        //布局方式   
-//        LinearLayout.LayoutParams p0 = new LinearLayout.LayoutParams
-//                (LinearLayout.LayoutParams.FILL_PARENT,LinearLayout.LayoutParams.FILL_PARENT);
-//        this.setContentView(ml, p0);  //设置根布局
-
         initdata();
         initView();
 
@@ -46,8 +41,6 @@ public class MainActivity extends BaseActivity {
         scroller = new Scroller(this);
         int X = scroller.getCurrX();
         Log.i("TAG", "" + X);
-        //scroller.startScroll(0, 0, 0, 100);
-        //invalidate();
     }
 
     private void initView() {
@@ -70,7 +63,7 @@ public class MainActivity extends BaseActivity {
 
                         break;
                     case 1:
-
+                        clazz=SearchActivity.class;
                         break;
                     case 2:
 
@@ -154,7 +147,10 @@ public class MainActivity extends BaseActivity {
                 tv.setText("进入环信");
                 tv.setTextSize(30);
                 tv.setBackgroundColor(Color.parseColor("#CEFFC2"));
-            } else {
+            } else if(position==1){
+                tv.setText("dogSearch");
+
+            }else {
                 tv.setText(datas.get(position));
             }
             tv.setTextSize(20);
