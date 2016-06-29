@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.EditText;
 
@@ -11,6 +12,7 @@ import android.widget.EditText;
 //import com.easemob.chat.EMChatManager;
 //import com.easemob.exceptions.EaseMobException;
 import com.example.administrator.myapplication01.R;
+import com.example.administrator.myapplication01.activity.MainActivity;
 import com.example.administrator.myapplication01.util.Util;
 
 /**
@@ -55,6 +57,14 @@ public class LoginActivity extends Activity implements View.OnClickListener {
                 break;
         }
     }
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        //摁下返回键时候直接退回主页
 
+        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+        startActivity(intent);
+
+        return super.onKeyDown(keyCode, event);
+    }
 
 }

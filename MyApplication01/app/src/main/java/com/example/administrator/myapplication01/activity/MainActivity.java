@@ -36,7 +36,7 @@ public class MainActivity extends BaseActivity {
         ListView lv = (ListView) findViewById(R.id.list);
         MyAdapter adapter = new MyAdapter();
         lv.setAdapter(adapter);
-//listView条目点击事件
+        //listView条目点击事件
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -53,7 +53,7 @@ public class MainActivity extends BaseActivity {
                         clazz = SearchActivity.class;
                         break;
                     case 2:
-                        clazz = ColorRing.class;
+                        clazz = ColorRingAcitivity.class;
                         break;
                     case 3:
 
@@ -135,9 +135,11 @@ public class MainActivity extends BaseActivity {
                 tv.setText("dogSearch");
 
             } else if (position == 2) {
-                tv.setText("ColorRing");
+                tv.setText("ColorRingView");
 
-            } else {
+            } else if(position == 2){
+                tv.setText("SurfaceView");
+            }else {
                 tv.setText(datas.get(position));
             }
             tv.setTextSize(30);
