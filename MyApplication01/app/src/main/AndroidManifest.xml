@@ -13,8 +13,10 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
     <!--<uses-permission android:name="android.permission.WRITE_APN_SETTINGS" />-->
-
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <!--环信-->
+
 
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
@@ -45,9 +47,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".activity.MainActivity"
             android:launchMode="singleTask"
-            android:screenOrientation="portrait"
-            android:name=".activity.MainActivity">
+            android:screenOrientation="portrait">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -67,6 +69,7 @@
         <activity android:name=".activity.SearchActivity" />
         <activity android:name=".activity.SearchShowActivity" />
         <activity android:name=".activity.ColorRingAcitivity" />
+        <activity android:name=".activity.VideoActivity" />
 
         <!--<meta-data android:name="UMENG_CHANNEL" android:value="wandoujia" />-->
         <!--多渠道打包-->
@@ -79,28 +82,26 @@
             android:value="57690a2267e58e3c2b001507" />
 
 
-
         <!--环信key-->
         <meta-data
             android:name="EASEMOB_APPKEY"
             android:value="walden-wang#myaplication" />
         <!--开启的服务-->
-        <service android:name="com.hyphenate.chat.EMChatService" android:exported="true"/>
+        <service
+            android:name="com.hyphenate.chat.EMChatService"
+            android:exported="true" />
         <!-- 声明SDK所需的receiver -->
         <receiver android:name="com.hyphenate.chat.EMMonitorReceiver">
             <intent-filter>
-                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
-                <data android:scheme="package"/>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+                <data android:scheme="package" />
             </intent-filter>
             <!-- 可选filter -->
             <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <action android:name="android.intent.action.USER_PRESENT" />
             </intent-filter>
         </receiver>
-
-
-
 
 
     </application>

@@ -56,7 +56,7 @@ public class MainActivity extends BaseActivity {
                         clazz = ColorRingAcitivity.class;
                         break;
                     case 3:
-
+                        clazz = VideoActivity.class;
                         break;
                     case 4:
 
@@ -129,7 +129,7 @@ public class MainActivity extends BaseActivity {
         public View getView(int position, View convertView, ViewGroup parent) {
             TextView tv = new TextView(MainActivity.this);
             if (position == 0) {
-                tv.setText("进入环信");
+                tv.setText("环信");
                 tv.setBackgroundColor(Color.parseColor("#CEFFC2"));
             } else if (position == 1) {
                 tv.setText("dogSearch");
@@ -137,9 +137,9 @@ public class MainActivity extends BaseActivity {
             } else if (position == 2) {
                 tv.setText("ColorRingView");
 
-            } else if(position == 2){
-                tv.setText("SurfaceView");
-            }else {
+            } else if (position == 3) {
+                tv.setText("Video_SurfaceView");
+            } else {
                 tv.setText(datas.get(position));
             }
             tv.setTextSize(30);

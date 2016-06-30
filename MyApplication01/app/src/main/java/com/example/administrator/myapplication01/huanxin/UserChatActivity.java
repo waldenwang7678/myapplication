@@ -29,7 +29,12 @@ public class UserChatActivity extends FragmentActivity implements View.OnClickLi
     SparseArray<Fragment> fragments = new SparseArray<Fragment>();
     private FragmentManager fragmentManager;
     private FragmentTransaction transaction;
-    private int flag=R.id.btn_conversation;
+    private int flag = R.id.btn_conversation;
+    private Button bt1;
+    private Button bt2;
+    private Button bt3;
+    private Button cacheButton;
+
     public UserChatActivity() {
     }
 
@@ -47,21 +52,20 @@ public class UserChatActivity extends FragmentActivity implements View.OnClickLi
 
     private void initView() {
 
-
         fragmentManager = getSupportFragmentManager();
         transaction = fragmentManager.beginTransaction();
         firFragment = new FirFragment();
-        cacheFragment=firFragment;
-
+        cacheFragment = firFragment;
         transaction.add(R.id.user_chat_fg, firFragment).commit();
 
-
-        Button bt1 = (Button) findViewById(R.id.btn_conversation);
-        Button bt2 = (Button) findViewById(R.id.btn_address_list);
-        Button bt3 = (Button) findViewById(R.id.btn_setting);
+        bt1 = (Button) findViewById(R.id.btn_conversation);
+        bt2 = (Button) findViewById(R.id.btn_address_list);
+        bt3 = (Button) findViewById(R.id.btn_setting);
         bt1.setOnClickListener(this);
         bt2.setOnClickListener(this);
         bt3.setOnClickListener(this);
+        bt1.setSelected(true);
+        cacheButton = bt1;
 
     }
 
@@ -69,12 +73,13 @@ public class UserChatActivity extends FragmentActivity implements View.OnClickLi
      * 优化方法:
      * 1,使用add.hide.show方法减少fragment对象的创建
      * 2,使用flag判断 , 避免多次点击同一个按钮hide 和show方法重复执行
+     *
      * @param v
      */
     @Override
     public void onClick(View v) {
-        int id=v.getId();
-        if(flag==id){
+        int id = v.getId();
+        if (flag == id) {
             return;
         }
         if (cacheFragment != null) {
@@ -91,9 +96,13 @@ public class UserChatActivity extends FragmentActivity implements View.OnClickLi
                     transaction.show(firFragment);
                 }
                 cacheFragment = firFragment;
-                flag=R.id.btn_conversation;
+                cacheButton.setSelected(false);
+                bt1.setSelected(true);
+                cacheButton = bt1;
+                flag = R.id.btn_conversation;
                 break;
             case R.id.btn_address_list:
+
                 if (secFragment == null) {
                     secFragment = new SecFragment();
                     transaction.add(R.id.user_chat_fg, secFragment);
@@ -101,9 +110,13 @@ public class UserChatActivity extends FragmentActivity implements View.OnClickLi
                     transaction.show(secFragment);
                 }
                 cacheFragment = secFragment;
-                flag=R.id.btn_address_list;
+                cacheButton.setSelected(false);
+                bt2.setSelected(true);
+                cacheButton = bt2;
+                flag = R.id.btn_address_list;
                 break;
             case R.id.btn_setting:
+
                 if (settingFragment == null) {
                     settingFragment = new SettingFragment();
                     transaction.add(R.id.user_chat_fg, settingFragment);
@@ -111,14 +124,14 @@ public class UserChatActivity extends FragmentActivity implements View.OnClickLi
                     transaction.show(settingFragment);
                 }
                 cacheFragment = settingFragment;
-                flag=R.id.btn_setting;
+                cacheButton.setSelected(false);
+                bt3.setSelected(true);
+                cacheButton = bt3;
+                flag = R.id.btn_setting;
                 break;
-
         }
         transaction.commit();
-
     }
-
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {

@@ -45,7 +45,7 @@ public class ColorRing extends View {
     private int CENTER_X;//中心点x
     private int CENTER_Y;//中心点x
 
-    private float totalRotateAngle = 0f;
+    private float totalRotateAngle = 0f;   //指示图片旋转角度
     private float currentRotateAngle = 0f;
     /**
      * 单位时间内旋转角度
@@ -206,16 +206,18 @@ public class ColorRing extends View {
             canvas.drawText(text[i], CENTER_X - 20, CENTER_X * 3 / 16, paintText);
             canvas.restore();
         }
-        if (isSetReferValue) {
+        if (isSetReferValue) {  //初始化时为false
 
             float r1 = CENTER_X * 6 / 8;
             canvas.save();
             canvas.translate(CENTER_X, CENTER_X);
-            // 区域,起始角,扫描角(顺时针),是否封闭(true 椭圆封闭,false 弧线),画笔
+            //  弧线  参数:区域,起始角,扫描角(顺时针),是否封闭(true 椭圆封闭,false 弧线),画笔
             canvas.drawArc(new RectF(-r1, -r1, r1, r1), -210, currentRotateAngle, false, paintMiddleArc);
             canvas.rotate(-30 + currentRotateAngle);
+
             Matrix matrix = new Matrix();
             matrix.preTranslate(-r1 - bitmapWidth * 3 / 8, -bitmapHeight / 2);
+            //图形 , 矩阵 , 画笔
             canvas.drawBitmap(bitmapLocation, matrix, paintBitmap);
             canvas.restore();
 
@@ -238,7 +240,7 @@ public class ColorRing extends View {
         isSetReferValue = !isSetReferValue;
 
         if (referValue <= 150) {
-            totalRotateAngle = 0f;
+            totalRotateAngle = 0f;    //指示图片旋转角度
         } else if (referValue <= 550) {
             totalRotateAngle = (referValue - 150) * 80 / 400f;
         } else if (referValue <= 700) {
@@ -281,7 +283,7 @@ public class ColorRing extends View {
                         rotateListener.rotate(currentRotateAngle, value);
                     }
 
-                    postInvalidate();
+                    postInvalidate();  //在子线程中更行View   (循环时候不停在更新视图)
                 }
             }
         }).start();
