@@ -6,6 +6,8 @@
 .DS_Store
 /build
 /captures
+misc.xml
+modules.xml
 
 
 
