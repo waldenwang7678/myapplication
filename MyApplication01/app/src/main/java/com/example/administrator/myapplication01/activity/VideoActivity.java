@@ -166,14 +166,14 @@ public class VideoActivity extends Activity implements SurfaceHolder.Callback {
                     return true;
                 }
                 String file = pathname.getName();
-//                if (file.length() > 4) {
+                if (file.length() > 4) {
                     System.out.println("**************"+pathname.toString());
                     String video_suffix = file.substring(file.length() - 3);
                     if (suffix_list.contains(video_suffix)) {
                         file_list.add(pathname.toString());
                         return false;
                     }
-//                }
+                }
                 return false;
             }
         });
