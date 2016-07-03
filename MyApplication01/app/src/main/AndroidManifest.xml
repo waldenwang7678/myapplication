@@ -70,6 +70,7 @@
         <activity android:name=".activity.SearchShowActivity" />
         <activity android:name=".activity.ColorRingAcitivity" />
         <activity android:name=".activity.VideoActivity" />
+        <activity android:name=".activity.ListViewItemSelecte" />
 
         <!--<meta-data android:name="UMENG_CHANNEL" android:value="wandoujia" />-->
         <!--多渠道打包-->

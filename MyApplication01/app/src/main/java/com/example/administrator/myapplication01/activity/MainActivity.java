@@ -59,6 +59,7 @@ public class MainActivity extends BaseActivity {
                         clazz = VideoActivity.class;
                         break;
                     case 4:
+                        clazz = ListViewItemSelecte.class;
 
                         break;
 
@@ -139,7 +140,9 @@ public class MainActivity extends BaseActivity {
 
             } else if (position == 3) {
                 tv.setText("Video_SurfaceView");
-            } else {
+            } else if(position == 4){
+                tv.setText("ListViewItemSeleccted");
+            }else {
                 tv.setText(datas.get(position));
             }
             tv.setTextSize(30);
