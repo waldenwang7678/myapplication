@@ -13,7 +13,6 @@ import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.administrator.myapplication01.R;
 
@@ -54,7 +53,7 @@ public class ListViewItemSelecte extends AppCompatActivity {
     }
 
     private void initData() {
-        for (float i = 0; i < 20; i++) {
+        for (float i = 0; i < 30; i++) {
             datas.add(i);
             isCheackMap.put((int) i, false);
         }
@@ -73,7 +72,6 @@ public class ListViewItemSelecte extends AppCompatActivity {
         bt1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(ListViewItemSelecte.this, "删除成功", Toast.LENGTH_SHORT).show();
 
                 initSetData(0);
 
@@ -84,7 +82,6 @@ public class ListViewItemSelecte extends AppCompatActivity {
         bt2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(ListViewItemSelecte.this, "全选成功", Toast.LENGTH_SHORT).show();
 
                 initSetData(1);
 
@@ -95,7 +92,6 @@ public class ListViewItemSelecte extends AppCompatActivity {
         bt3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(ListViewItemSelecte.this, "反选成功", Toast.LENGTH_SHORT).show();
 
                 initSetData(2);
 
@@ -112,15 +108,22 @@ public class ListViewItemSelecte extends AppCompatActivity {
      */
     private void initSetData(int a) {
         if (a == 0) {//删除
-            int dif=0;
+            ArrayList<Integer> cache = new ArrayList<>();
             Iterator iter = isCheackMap.entrySet().iterator();
             while (iter.hasNext()) {
                 Map.Entry entry = (Map.Entry) iter.next();
-               // boolean flag=(boolean) entry.getValue();
                 if ((boolean) entry.getValue()) {
-                    datas.remove(((int) entry.getKey())-dif);
-                    dif++;
+                    int aaa = (int) entry.getKey();  //hashmap 值为 true 的 key
+                    cache.add(aaa);  //保存位置信息
                 }
+            }
+            int dif = 0;
+            Iterator it = datas.iterator();
+            while (it.hasNext()) {
+                it.next();
+                if (cache.contains(dif))
+                    it.remove();
+                dif++;
             }
             chackData.clear();
             isCheackMap.clear();
@@ -129,14 +132,16 @@ public class ListViewItemSelecte extends AppCompatActivity {
             }
         } else if (a == 1) {     //全选
             chackData.clear();
+            isCheackMap.clear();
             for (int i = 0; i < datas.size(); i++) {
                 chackData.put(i, datas.get(i));
+                isCheackMap.put(i, true);
             }
-            Iterator iter = isCheackMap.entrySet().iterator();
-            while (iter.hasNext()) {
-                Map.Entry entry = (Map.Entry) iter.next();
-                entry.setValue(true);
-            }
+//            Iterator iter = isCheackMap.entrySet().iterator();
+//            while (iter.hasNext()) {
+//                Map.Entry entry = (Map.Entry) iter.next();
+//                entry.setValue(true);
+//            }
         } else if (a == 2) {     //反选
             for (int i = 0; i < datas.size(); i++) {
                 if (chackData.containsKey(i)) {

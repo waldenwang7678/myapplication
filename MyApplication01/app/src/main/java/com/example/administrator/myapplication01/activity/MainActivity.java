@@ -60,6 +60,7 @@ public class MainActivity extends BaseActivity {
                         break;
                     case 4:
                         clazz = ListViewItemSelecte.class;
+                        break;
                     case 5:
                         clazz = SideSlippingActivity.class;
                         break;
