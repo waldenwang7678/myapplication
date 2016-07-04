@@ -60,7 +60,8 @@ public class MainActivity extends BaseActivity {
                         break;
                     case 4:
                         clazz = ListViewItemSelecte.class;
-
+                    case 5:
+                        clazz = SideSlippingActivity.class;
                         break;
 
                 }
@@ -140,9 +141,11 @@ public class MainActivity extends BaseActivity {
 
             } else if (position == 3) {
                 tv.setText("Video_SurfaceView");
-            } else if(position == 4){
+            } else if (position == 4) {
                 tv.setText("ListViewItemSeleccted");
-            }else {
+            } else if (position == 5) {
+                tv.setText("sldeslipping");
+            } else {
                 tv.setText(datas.get(position));
             }
             tv.setTextSize(30);
