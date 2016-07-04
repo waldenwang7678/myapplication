@@ -1,7 +1,6 @@
 package com.example.administrator.myapplication01.huanxin;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -10,8 +9,6 @@ import android.widget.EditText;
 
 import com.example.administrator.myapplication01.R;
 import com.example.administrator.myapplication01.util.Util;
-import com.hyphenate.chat.EMClient;
-import com.hyphenate.exceptions.HyphenateException;
 
 public class RegesterActivity extends Activity {
 
