@@ -111,12 +111,15 @@ public class ListViewItemSelecte extends AppCompatActivity {
      * @param a
      */
     private void initSetData(int a) {
-        if (a == 0) {           //删除
+        if (a == 0) {//删除
+            int dif=0;
             Iterator iter = isCheackMap.entrySet().iterator();
             while (iter.hasNext()) {
                 Map.Entry entry = (Map.Entry) iter.next();
+               // boolean flag=(boolean) entry.getValue();
                 if ((boolean) entry.getValue()) {
-                    datas.remove((int) entry.getKey());
+                    datas.remove(((int) entry.getKey())-dif);
+                    dif++;
                 }
             }
             chackData.clear();
