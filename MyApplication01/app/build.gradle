@@ -60,6 +60,7 @@ dependencies {
     compile 'com.android.support:support-v4:23.3.0'
     compile files('D:/myproject/MyApplication01/libs/volley.jar')
     compile files('D:/myproject/MyApplication01/libs/xUtils-2.6.14.jar')
+    compile files('D:/myproject/MyApplication01/libs/nineoldandroids-2.4.0.jar')
 }
 bugtags {
     //自动上传符号表功能配置，如果需要根据 build varint 配置，请参考插件详细使用说明
