@@ -175,7 +175,7 @@ public class SideSlippingActivity extends Activity {
                 convertView = new TextView(SideSlippingActivity.this);
             }
             ((TextView) convertView).setText(datas.get(position));
-
+            ((TextView) convertView).setTextSize(24);
             return convertView;
         }
     }

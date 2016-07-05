@@ -64,6 +64,12 @@ public class MainActivity extends BaseActivity {
                     case 5:
                         clazz = SideSlippingActivity.class;
                         break;
+                    case 6:
+                        clazz = JsActivity.class;
+                        break;
+                    case 7:
+                        clazz=JsonParseActivity.class;
+                        break;
 
                 }
                 if (clazz != null) {
@@ -91,7 +97,7 @@ public class MainActivity extends BaseActivity {
                 clazz = webViewActivity.class;
                 break;
             case R.id.bt2:
-                clazz = TActivity.class;
+                clazz = ScrollerActivity.class;
                 break;
             case R.id.bt3:
                 clazz = VollyTestAvtivity.class;
@@ -146,7 +152,11 @@ public class MainActivity extends BaseActivity {
                 tv.setText("ListViewItemSeleccted");
             } else if (position == 5) {
                 tv.setText("sldeslipping");
-            } else {
+            } else if(position==6){
+                tv.setText("JavaScript");
+            }else if(position==7){
+                tv.setText("JsonParse");
+            }else {
                 tv.setText(datas.get(position));
             }
             tv.setTextSize(30);

@@ -18,7 +18,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:src="@drawable/a" />
+                android:src="@drawable/dog" />
 
 
             <Button
@@ -63,9 +63,11 @@
         android:background="@android:color/holo_green_light">
 
         <TextView
+            android:textSize="30sp"
+            android:layout_centerInParent="true"
             android:id="@+id/right_textview"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="个人登陆页面" />
+            android:text="巫妖王之怒" />
     </RelativeLayout>
 </android.support.v4.widget.DrawerLayout>
