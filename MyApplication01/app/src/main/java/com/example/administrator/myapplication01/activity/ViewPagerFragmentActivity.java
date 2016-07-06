@@ -8,7 +8,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 
 import com.bugtags.library.Bugtags;
-import com.example.administrator.myapplication01.MyPagerFragment;
+import com.example.administrator.myapplication01.fragment.MyPagerFragment;
 import com.example.administrator.myapplication01.util.PagerSlidingTabStrip;
 import com.example.administrator.myapplication01.R;
 import com.umeng.analytics.MobclickAgent;

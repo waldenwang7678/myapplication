@@ -44,4 +44,9 @@
     <color name="translat_black">#88000000</color>
     <color name="black">#000000</color>
 
+
+    <color name="theme_primary">#00BCD4</color>
+    <color name="text_white_87">#deFFFFFF</color>
+
+
 </resources>

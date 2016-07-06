@@ -2,5 +2,8 @@
 <resources>
     <dimen name="size_14">14sp</dimen>
     <dimen name="margin_12">12dp</dimen>
+    <dimen name="keyline_spacing">16dp</dimen>
+    <dimen name="drawer_header_textsize">20dp</dimen>
+    <dimen name="drawer_header_text_spacing">@dimen/keyline_spacing</dimen>
 
 </resources>

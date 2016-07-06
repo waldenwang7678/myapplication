@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/easeui/EaseUI.iml" filepath="$PROJECT_DIR$/easeui/EaseUI.iml" />
       <module fileurl="file://$PROJECT_DIR$/MyApplication01.iml" filepath="$PROJECT_DIR$/MyApplication01.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/material-sheet-fab/material-sheet-fab.iml" filepath="$PROJECT_DIR$/material-sheet-fab/material-sheet-fab.iml" />
     </modules>
   </component>
 </project>

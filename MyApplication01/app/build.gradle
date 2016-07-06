@@ -48,6 +48,7 @@ android {
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile 'junit:junit:4.12'
+    compile 'com.android.support:design:23.0.1'
     compile 'com.android.support:appcompat-v7:23.3.0'
     compile 'com.squareup.dagger:dagger:1.2.1'
     compile 'com.squareup.okhttp:okhttp:2.0.0'
@@ -60,7 +61,7 @@ dependencies {
     compile 'com.android.support:support-v4:23.3.0'
     compile files('D:/myproject/MyApplication01/libs/volley.jar')
     compile files('D:/myproject/MyApplication01/libs/xUtils-2.6.14.jar')
-    compile files('D:/myproject/MyApplication01/libs/nineoldandroids-2.4.0.jar')
+    compile project(':material-sheet-fab')
 }
 bugtags {
     //自动上传符号表功能配置，如果需要根据 build varint 配置，请参考插件详细使用说明

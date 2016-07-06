@@ -22,7 +22,7 @@ public class ShowWebImageActivity extends Activity {
     private String str;
     private Drawable drawable;
     private ImageView iv;
-    private MyDialog md;
+    private MyDialog md=null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +36,7 @@ public class ShowWebImageActivity extends Activity {
     private void initData() {
         Intent intent = getIntent();
         str = intent.getStringExtra("image");
+        System.out.println(str);
     }
 
     private void initView() {
@@ -45,7 +46,12 @@ public class ShowWebImageActivity extends Activity {
             @Override
             public void run() {
                 if (!ShowWebImageActivity.this.isFinishing()) {
-                    md = MyDialog.show(ShowWebImageActivity.this, "正在加载");
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            md = MyDialog.show(ShowWebImageActivity.this, "正在加载");
+                        }
+                    });
                 }
                 drawable = loadImageFromNetwork(str);
                 iv.post(new Runnable() {

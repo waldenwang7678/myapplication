@@ -16,19 +16,19 @@
         android:orientation="horizontal">
 
         <Button
-            style="@style/My_buttom"
             android:id="@+id/bt1"
+            style="@style/My_buttom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="click"
             android:text="百度" />
 
         <Button
-            android:layout_marginLeft="20dp"
-            style="@style/My_buttom"
             android:id="@+id/bt2"
+            style="@style/My_buttom"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
             android:onClick="click"
             android:text="滑动" />
     </LinearLayout>
@@ -63,9 +63,11 @@
 
 
     <ListView
-        android:divider="@color/app_yellow_color"
-        android:dividerHeight="@dimen/listview_divideline"
         android:id="@+id/list"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:divider="@color/app_yellow_color"
+        android:dividerHeight="@dimen/listview_divideline" />
+
+
 </LinearLayout>

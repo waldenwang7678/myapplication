@@ -47,8 +47,7 @@ public class Tool {
                 } catch (final HyphenateException e) {
                     mContext.runOnUiThread(new Runnable() {
                         public void run() {
-                            if (!mContext.isFinishing())
-                                md.dismiss();
+                            md.dismiss();
                             int errorCode = e.getErrorCode();
                             if (errorCode == EMError.NETWORK_ERROR) {
                                 Toast.makeText(mContext, "NETWORK_ERROR", Toast.LENGTH_SHORT).show();
@@ -85,9 +84,10 @@ public class Tool {
         EMClient.getInstance().login(count, pwd, new EMCallBack() {//回调的三个方法都在子线程中执行  方法异步
             @Override
             public void onSuccess() {
-                md.dismiss();
+
                 mContext.runOnUiThread(new Runnable() {
                     public void run() {
+                        md.dismiss();
                         //以下两个方法是为了保证进入主页面后本地会话和群组都 load 完毕。
                         EMClient.getInstance().groupManager().loadAllGroups();
                         EMClient.getInstance().chatManager().loadAllConversations();

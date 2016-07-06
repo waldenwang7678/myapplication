@@ -101,7 +101,6 @@ public class JsActivity extends Activity {
             intent.putExtra("image", img);
             intent.setClass(context, ShowWebImageActivity.class);
             context.startActivity(intent);
-            System.out.println(img);
         }
     }
 
