@@ -33,12 +33,12 @@ public class MiniMusicActivity extends MiniBaseActivity implements CompoundButto
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_minimusic);
-        initAllViews();
+        initView();
         bindService();
         startService(serviceIntent);
     }
 
-    private void initAllViews() {
+    private void initView() {
         checkBox = (CheckBox) findViewById(R.id.main_check_box);
         checkBox.setOnCheckedChangeListener(this);
 
