@@ -105,6 +105,7 @@
             </intent-filter>
         </receiver>
 
+        <activity android:name=".activity.SheetFatActivity"></activity>
     </application>
 
 </manifest>

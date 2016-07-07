@@ -68,7 +68,9 @@ public class MainActivity extends BaseActivity {
                         clazz = JsActivity.class;
                         break;
                     case 7:
-                        clazz=JsonParseActivity.class;
+                        clazz = JsonParseActivity.class;
+                    case 8:
+                        clazz = SheetFatActivity.class;
                         break;
 
                 }
@@ -152,11 +154,13 @@ public class MainActivity extends BaseActivity {
                 tv.setText("ListViewItemSeleccted");
             } else if (position == 5) {
                 tv.setText("sldeslipping");
-            } else if(position==6){
+            } else if (position == 6) {
                 tv.setText("JavaScript");
-            }else if(position==7){
+            } else if (position == 7) {
                 tv.setText("JsonParse");
-            }else {
+            } else if (position == 8) {
+                tv.setText("SheetFatActivity");
+            } else {
                 tv.setText(datas.get(position));
             }
             tv.setTextSize(30);
