@@ -70,7 +70,7 @@
         <activity android:name=".activity.ListViewItemSelecte" />
         <activity android:name=".activity.SideSlippingActivity" />
         <activity android:name=".activity.ShowWebImageActivity" />
-        <activity android:name=".activity.JsActivity" />
+        <activity android:name=".activity.JavaScriptActivity" />
         <activity android:name=".activity.JsonParseActivity" />
 
         <!-- <meta-data android:name="UMENG_CHANNEL" android:value="wandoujia" /> -->
@@ -105,7 +105,8 @@
             </intent-filter>
         </receiver>
 
-        <activity android:name=".activity.SheetFatActivity"></activity>
+        <activity android:name=".activity.SheetFatActivity" />
+        <activity android:name=".activity.Dagger2Activity"></activity>
     </application>
 
 </manifest>

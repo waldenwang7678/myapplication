@@ -16,7 +16,7 @@ import com.example.administrator.myapplication01.R;
 /**
  * Created by Administrator on 2016/7/5 0005.
  */
-public class JsActivity extends Activity {
+public class JavaScriptActivity extends Activity {
 
     private WebView jswv;
     private Button previous;

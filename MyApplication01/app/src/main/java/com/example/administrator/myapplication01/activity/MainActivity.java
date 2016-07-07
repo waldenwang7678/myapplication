@@ -1,7 +1,6 @@
 package com.example.administrator.myapplication01.activity;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,6 +21,18 @@ import java.util.List;
 public class MainActivity extends BaseActivity {
     private List<String> datas = new ArrayList<String>();
     Class clazz = null;
+    Class[][] classDatas = new Class[][]{   //空间->时间
+            {UserChatActivity.class, LoginActivity.class},
+            {SearchActivity.class},
+            {ColorRingAcitivity.class},
+            {VideoActivity.class},
+            {ListViewItemSelecte.class},
+            {SideSlippingActivity.class},
+            {JavaScriptActivity.class},
+            {JsonParseActivity.class},
+            {SheetFatActivity.class},
+            {Dagger2Activity.class}
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +43,18 @@ public class MainActivity extends BaseActivity {
         initView();
     }
 
+    private void initdata() {
+        int lengh = classDatas.length;
+        for (int i = 0; i < 30; i++) {
+            if (i < lengh) {
+                String classs = classDatas[i][0].getSimpleName();
+                datas.add(classs.substring(0, classs.length() - 8));
+            } else {
+                datas.add("data" + i);
+            }
+        }
+    }
+
     private void initView() {
         ListView lv = (ListView) findViewById(R.id.list);
         MyAdapter adapter = new MyAdapter();
@@ -40,39 +63,14 @@ public class MainActivity extends BaseActivity {
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                switch (position) {
-                    case 0:
-                        //如果之前登陆过,直接跳转到聊天页
-                        if (EMClient.getInstance().isLoggedInBefore()) {
-                            clazz = UserChatActivity.class;
-                        } else {
-                            clazz = LoginActivity.class;
-                        }
-                        break;
-                    case 1:
-                        clazz = SearchActivity.class;
-                        break;
-                    case 2:
-                        clazz = ColorRingAcitivity.class;
-                        break;
-                    case 3:
-                        clazz = VideoActivity.class;
-                        break;
-                    case 4:
-                        clazz = ListViewItemSelecte.class;
-                        break;
-                    case 5:
-                        clazz = SideSlippingActivity.class;
-                        break;
-                    case 6:
-                        clazz = JsActivity.class;
-                        break;
-                    case 7:
-                        clazz = JsonParseActivity.class;
-                    case 8:
-                        clazz = SheetFatActivity.class;
-                        break;
-
+                if (position == 0) {
+                    if (EMClient.getInstance().isLoggedInBefore()) {
+                        clazz = classDatas[0][0];
+                    } else {
+                        clazz = classDatas[0][1];
+                    }
+                } else {
+                    clazz = classDatas[position][0];
                 }
                 if (clazz != null) {
                     Intent intent = new Intent(MainActivity.this, clazz);
@@ -85,11 +83,6 @@ public class MainActivity extends BaseActivity {
         });
     }
 
-    private void initdata() {
-        for (int i = 0; i < 30; i++) {
-            datas.add("data" + i);
-        }
-    }
 
     //button点击事件
     public void click(View view) {
@@ -139,32 +132,8 @@ public class MainActivity extends BaseActivity {
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
             TextView tv = new TextView(MainActivity.this);
-            if (position == 0) {
-                tv.setText("环信");
-                tv.setBackgroundColor(Color.parseColor("#CEFFC2"));
-            } else if (position == 1) {
-                tv.setText("dogSearch");
-
-            } else if (position == 2) {
-                tv.setText("ColorRingView");
-
-            } else if (position == 3) {
-                tv.setText("Video_SurfaceView");
-            } else if (position == 4) {
-                tv.setText("ListViewItemSeleccted");
-            } else if (position == 5) {
-                tv.setText("sldeslipping");
-            } else if (position == 6) {
-                tv.setText("JavaScript");
-            } else if (position == 7) {
-                tv.setText("JsonParse");
-            } else if (position == 8) {
-                tv.setText("SheetFatActivity");
-            } else {
-                tv.setText(datas.get(position));
-            }
+            tv.setText(datas.get(position));
             tv.setTextSize(30);
-
             return tv;
         }
 
