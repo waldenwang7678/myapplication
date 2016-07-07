@@ -1,5 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'com.bugtags.library.plugin'
+//apply plugin: 'com.neenbedankt.android-apt'
+
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.3"
@@ -50,7 +52,6 @@ dependencies {
     compile 'junit:junit:4.12'
     compile 'com.android.support:design:23.0.1'
     compile 'com.android.support:appcompat-v7:23.3.0'
-    compile 'com.squareup.dagger:dagger:1.2.1'
     compile 'com.squareup.okhttp:okhttp:2.0.0'
     compile 'com.bugtags.library:bugtags-lib:latest.integration'
     compile 'com.umeng.analytics:analytics:latest.integration'
@@ -63,6 +64,10 @@ dependencies {
     compile files('D:/myproject/MyApplication01/libs/xUtils-2.6.14.jar')
     compile project(':material-sheet-fab')
     compile 'com.android.support:cardview-v7:23.0.1'
+
+    //apt 'com.google.dagger:dagger-compiler:2.0'
+    compile 'com.google.dagger:dagger:2.0'
+
 }
 bugtags {
     //自动上传符号表功能配置，如果需要根据 build varint 配置，请参考插件详细使用说明

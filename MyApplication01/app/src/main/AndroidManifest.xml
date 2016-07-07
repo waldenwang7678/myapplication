@@ -106,7 +106,9 @@
         </receiver>
 
         <activity android:name=".activity.SheetFatActivity" />
-        <activity android:name=".activity.Dagger2Activity"></activity>
+        <activity android:name=".activity.Dagger2Activity" />
+        <activity android:name=".activity.MiniMusicActivity"/>
+        <service android:name=".minimusic.MusicService"/>
     </application>
 
 </manifest>

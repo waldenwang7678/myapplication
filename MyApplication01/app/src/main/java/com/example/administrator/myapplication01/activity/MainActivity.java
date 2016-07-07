@@ -31,7 +31,8 @@ public class MainActivity extends BaseActivity {
             {JavaScriptActivity.class},
             {JsonParseActivity.class},
             {SheetFatActivity.class},
-            {Dagger2Activity.class}
+            {Dagger2Activity.class},
+            {MiniMusicActivity.class},
     };
 
     @Override
