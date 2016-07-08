@@ -16,10 +16,6 @@ import com.example.administrator.myapplication01.minimusic.MiniBaseActivity;
 import com.example.administrator.myapplication01.minimusic.MusicService;
 
 
-/**
- * Created by MarioStudio on 2016/5/24.
- */
-
 public class MiniMusicActivity extends MiniBaseActivity implements CompoundButton.OnCheckedChangeListener {
 
     private ServiceConnection serviceConnection;

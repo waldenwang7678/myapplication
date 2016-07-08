@@ -23,7 +23,6 @@
     <color name="color_actionbar_gray">#505050</color>
 
 
-
     <color name="write_tranlate">#eeeeee</color>
     <color name="black_tranlate">#000000</color>
     <color name="txt_top_color">#272636</color>
@@ -54,5 +53,7 @@
     <color name="theme_accent">#FFEB3B</color>
     <color name="theme_primary_dark2">#006064</color>
 
+    <color name="rippelColor">#0099CC</color>
+    <color name="holo_redlight">#ff9E000A</color>
 
 </resources>

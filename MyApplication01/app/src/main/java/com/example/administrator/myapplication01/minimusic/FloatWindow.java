@@ -17,9 +17,6 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.RelativeLayout;
 
-/**
- * Created by MarioStudio on 2016/5/24.
- */
 
 public class FloatWindow {
 

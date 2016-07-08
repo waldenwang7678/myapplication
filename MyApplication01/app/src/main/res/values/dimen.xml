@@ -6,4 +6,12 @@
     <dimen name="drawer_header_textsize">20dp</dimen>
     <dimen name="drawer_header_text_spacing">@dimen/keyline_spacing</dimen>
 
+
+    <dimen name="rippleStrokeWidth">2dp</dimen>
+    <dimen name="rippleRadius">64dp</dimen>
+
+    <dimen name="mtf_cardHeight_initial">4dp</dimen>
+    <dimen name="mtf_cardHeight_final">55dp</dimen>
+    <dimen name="mtf_corner_radius">4dp</dimen>
+
 </resources>

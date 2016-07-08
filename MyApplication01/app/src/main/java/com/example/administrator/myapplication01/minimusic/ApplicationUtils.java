@@ -5,12 +5,13 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.util.Log;
 
-/**
- * Created by MarioStudio on 2016/5/30.
- */
 
 public class ApplicationUtils {
-
+    /**
+     * 版本信息
+     * @param context
+     * @return
+     */
     public static String getAppVersionName(Context context) {
         String versionName = "";
         try {

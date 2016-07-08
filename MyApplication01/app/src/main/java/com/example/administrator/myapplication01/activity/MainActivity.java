@@ -21,7 +21,7 @@ import java.util.List;
 public class MainActivity extends BaseActivity {
     private List<String> datas = new ArrayList<String>();
     Class clazz = null;
-    Class[][] classDatas = new Class[][]{   //空间->时间
+    Class[][] classDatas = new Class[][]{
             {UserChatActivity.class, LoginActivity.class},
             {SearchActivity.class},
             {ColorRingAcitivity.class},
@@ -33,6 +33,9 @@ public class MainActivity extends BaseActivity {
             {SheetFatActivity.class},
             {Dagger2Activity.class},
             {MiniMusicActivity.class},
+            {MaterialTextFieldActivity.class},
+            {RippleBGActivity.class},
+
     };
 
     @Override

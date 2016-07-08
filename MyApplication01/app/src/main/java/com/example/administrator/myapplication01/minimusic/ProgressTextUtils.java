@@ -4,12 +4,14 @@ import java.text.DecimalFormat;
 import java.util.Calendar;
 import java.util.Date;
 
-/**
- * Created by MarioStudio on 2016/3/13.
- */
+
 
 public class ProgressTextUtils {
-
+    /**
+     *  时间转换
+     * @param time
+     * @return
+     */
     public static String getProgressText(long time) {
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(new Date(time));

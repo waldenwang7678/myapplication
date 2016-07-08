@@ -107,8 +107,12 @@
 
         <activity android:name=".activity.SheetFatActivity" />
         <activity android:name=".activity.Dagger2Activity" />
-        <activity android:name=".activity.MiniMusicActivity"/>
-        <service android:name=".minimusic.MusicService"/>
+        <activity android:name=".activity.MiniMusicActivity" />
+
+        <service android:name=".minimusic.MusicService" />
+
+        <activity android:name=".activity.MaterialTextFieldActivity" />
+        <activity android:name=".activity.RippleBGActivity"></activity>
     </application>
 
 </manifest>

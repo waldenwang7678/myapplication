@@ -28,9 +28,6 @@ import static com.example.administrator.myapplication01.minimusic.AudioState.STA
 import static com.example.administrator.myapplication01.minimusic.AudioState.STATE_STOP;
 
 
-/**
- * Created by MarioStudio on 2016/5/23.
- */
 
 public class MusicService extends Service implements PlayerInterface, View.OnClickListener, SeekBar.OnSeekBarChangeListener, MediaPlayer.OnCompletionListener, MediaPlayer.OnPreparedListener, MediaPlayer.OnBufferingUpdateListener {
 

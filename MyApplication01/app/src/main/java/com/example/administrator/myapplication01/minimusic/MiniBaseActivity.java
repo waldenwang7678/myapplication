@@ -7,9 +7,7 @@ import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
 
-/**
- * Created by MarioStudio on 2016/5/30.
- */
+
 
 public class MiniBaseActivity extends Activity {
 

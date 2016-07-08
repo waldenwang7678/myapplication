@@ -1,8 +1,5 @@
 package com.example.administrator.myapplication01.minimusic;
 
-/**
- * Created by MarioStudio on 2016/5/25.
- */
 
 public enum AudioState {
 
@@ -13,4 +10,5 @@ public enum AudioState {
     AudioState(int state) {
         this.state = state;
     }
+
 }
