@@ -112,7 +112,8 @@
         <service android:name=".minimusic.MusicService" />
 
         <activity android:name=".activity.MaterialTextFieldActivity" />
-        <activity android:name=".activity.RippleBGActivity"></activity>
+        <activity android:name=".activity.RippleBGActivity" />
+        <activity android:name=".activity.SpinnerLoadingActivity"></activity>
     </application>
 
 </manifest>

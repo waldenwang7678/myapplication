@@ -2,6 +2,7 @@ package com.example.administrator.myapplication01;
 
 import android.app.Application;
 
+import com.example.administrator.myapplication01.util.Util;
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.chat.EMOptions;
 import com.umeng.analytics.MobclickAgent;
@@ -20,24 +21,28 @@ public class MyAplication extends Application {
         super.onCreate();
         instance = this;
         //初始化BugTag
-      //  Bugtags.start("e0dd62b04fbad2d051eff53c2a116482", this, Bugtags.BTGInvocationEventBubble);
+        //  Bugtags.start("e0dd62b04fbad2d051eff53c2a116482", this, Bugtags.BTGInvocationEventBubble);
         //初始化友盟
         MobclickAgent.setScenarioType(this, MobclickAgent.EScenarioType.E_UM_NORMAL);
 
 
-        EMOptions options = new EMOptions();
-// 默认添加好友时，是不需要验证的，改成需要验证
-       options.setAcceptInvitationAlways(false);
-//初始化环信
-        EMClient.getInstance().init(this, options);
-//在做打包混淆时，关闭debug模式，避免消耗不必要的资源
-        EMClient.getInstance().setDebugMode(false);
+        //真机上环信崩溃,通过获取手机号判断是真机还是模拟器
+        String str = Util.getPhoneNum(this);
+        System.out.println(str);
 
+        if(str.matches("00000000000")){
+            EMOptions options = new EMOptions();
+            // 默认添加好友时，是不需要验证的，改成需要验证
+            options.setAcceptInvitationAlways(false);
+            //初始化环信
+            EMClient.getInstance().init(this, options);
+            //在做打包混淆时，关闭debug模式，避免消耗不必要的资源
+            EMClient.getInstance().setDebugMode(false);
+        }
     }
 
 
-
-    public static Application getInstance(){
+    public static Application getInstance() {
 
 
         return instance;

@@ -35,6 +35,7 @@ public class MainActivity extends BaseActivity {
             {MiniMusicActivity.class},
             {MaterialTextFieldActivity.class},
             {RippleBGActivity.class},
+            {SpinnerLoadingActivity.class},
 
     };
 
@@ -68,12 +69,15 @@ public class MainActivity extends BaseActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 if (position == 0) {
+
+
+
                     if (EMClient.getInstance().isLoggedInBefore()) {
                         clazz = classDatas[0][0];
                     } else {
                         clazz = classDatas[0][1];
                     }
-                } else {
+                } else if(position<classDatas.length) {
                     clazz = classDatas[position][0];
                 }
                 if (clazz != null) {
