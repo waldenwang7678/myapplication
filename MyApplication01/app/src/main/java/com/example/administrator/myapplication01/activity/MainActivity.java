@@ -13,6 +13,7 @@ import android.widget.Toast;
 import com.example.administrator.myapplication01.R;
 import com.example.administrator.myapplication01.huanxin.LoginActivity;
 import com.example.administrator.myapplication01.huanxin.UserChatActivity;
+import com.example.administrator.myapplication01.util.Util;
 import com.hyphenate.chat.EMClient;
 
 import java.util.ArrayList;
@@ -36,6 +37,8 @@ public class MainActivity extends BaseActivity {
             {MaterialTextFieldActivity.class},
             {RippleBGActivity.class},
             {SpinnerLoadingActivity.class},
+            {NoBoringActionBarActivity.class},
+            {LikeButtonActivity.class},
 
     };
 
@@ -69,14 +72,16 @@ public class MainActivity extends BaseActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 if (position == 0) {
-
-
-
-                    if (EMClient.getInstance().isLoggedInBefore()) {
-                        clazz = classDatas[0][0];
-                    } else {
-                        clazz = classDatas[0][1];
+                    if(Util.getSerialNum().matches("nox")){
+                        if (EMClient.getInstance().isLoggedInBefore()) {
+                            clazz = classDatas[0][0];
+                        } else {
+                            clazz = classDatas[0][1];
+                        }
+                    }else{
+                        Util.toast(MainActivity.this,"这台设备上环信无法初始化");
                     }
+
                 } else if(position<classDatas.length) {
                     clazz = classDatas[position][0];
                 }

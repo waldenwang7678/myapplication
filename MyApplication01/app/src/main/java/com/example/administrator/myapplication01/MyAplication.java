@@ -26,11 +26,17 @@ public class MyAplication extends Application {
         MobclickAgent.setScenarioType(this, MobclickAgent.EScenarioType.E_UM_NORMAL);
 
 
-        //真机上环信崩溃,通过获取手机号判断是真机还是模拟器
-        String str = Util.getPhoneNum(this);
-        System.out.println(str);
+//        int fd = open("/proc/diskstats", O_RDONLY);
+//        bytes = read(fd, buf, bytes);
+//        IMEI 识别码
+//        final TelephonyManager tm = (TelephonyManager) getBaseContext().getSystemService(Context.TELEPHONY_SERVICE);
+//        String imei = tm.getDeviceId();
+//        String imsi = tm.getSubscriberId();
+//        System.out.println("imei:"+imei+"......imsi:"+imsi);
 
-        if(str.matches("00000000000")){
+//        String str = Util.getPhoneNum(this);
+//先判断真机还是模拟器在初始化环信
+        if (Util.getSerialNum().matches("nox")) {
             EMOptions options = new EMOptions();
             // 默认添加好友时，是不需要验证的，改成需要验证
             options.setAcceptInvitationAlways(false);

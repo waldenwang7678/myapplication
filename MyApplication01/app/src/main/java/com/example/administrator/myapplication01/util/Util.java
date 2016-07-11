@@ -28,7 +28,6 @@ public class Util {
                     return macAddress;
             }
         } catch (Exception e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
             return macAddress;
         }
@@ -40,10 +39,10 @@ public class Util {
         String num = "00000000000";
         TelephonyManager telephonemanage = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
         String str = telephonemanage.getDeviceId();
-        String sim=telephonemanage.getSimSerialNumber();
-        if(sim!=null){
-            System.out.println("SimSerialNumber:"+telephonemanage.getSimSerialNumber());
-        }else{
+        String sim = telephonemanage.getSimSerialNumber();
+        if (sim != null) {
+            System.out.println("SimSerialNumber:" + telephonemanage.getSimSerialNumber());
+        } else {
             System.out.println("SimSerialNumber:空");
         }
 
@@ -53,5 +52,9 @@ public class Util {
 
         boolean isEmulator = "00000000000".equalsIgnoreCase(telephonemanage.getDeviceId());
         return num;
+    }
+
+    public static String getSerialNum() {
+        return android.os.Build.SERIAL;
     }
 }

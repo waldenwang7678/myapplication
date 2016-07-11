@@ -14,4 +14,7 @@
     <dimen name="mtf_cardHeight_final">55dp</dimen>
     <dimen name="mtf_corner_radius">4dp</dimen>
 
+    <dimen name="header_height">250dp</dimen>
+    <dimen name="header_logo_size">100dp</dimen>
+
 </resources>

@@ -27,7 +27,7 @@ import com.example.administrator.myapplication01.R;
 /**
  * 高仿阿里芝麻信用分仪表盘效果
  */
-public class testView extends FrameLayout {
+public class zimaxinyongView extends FrameLayout {
 
 
     private Paint mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);// 渐变色环画笔
@@ -53,17 +53,17 @@ public class testView extends FrameLayout {
     private int CENTER_Y;//中心点x
 
 
-    public testView(Context context) {
+    public zimaxinyongView(Context context) {
         super(context);
         init();
     }
 
-    public testView(Context context, AttributeSet attrs) {
+    public zimaxinyongView(Context context, AttributeSet attrs) {
         super(context, attrs);
         init();
     }
 
-    public testView(Context context, AttributeSet attrs, int defStyle) {
+    public zimaxinyongView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         init();
     }
