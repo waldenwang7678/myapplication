@@ -115,7 +115,14 @@
         <activity android:name=".activity.RippleBGActivity" />
         <activity android:name=".activity.SpinnerLoadingActivity" />
         <activity android:name=".activity.NoBoringActionBarActivity" />
-        <activity android:name=".activity.LikeButtonActivity"></activity>
+        <activity android:name=".activity.LikeButtonActivity" />
+        <activity android:name=".activity.HuahuabanActivity" />
+        <activity android:name=".activity.hhActivity" />
+
+        <!-- <activity android:name=".activity.DynamicListbbActivity"/> -->
+
+        <activity android:name=".activity.MyCircleActivity" />
+        <activity android:name=".activity.StickedActivity"></activity>
     </application>
 
 </manifest>

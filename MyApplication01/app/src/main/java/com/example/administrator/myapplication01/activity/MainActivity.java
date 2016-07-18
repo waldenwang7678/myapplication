@@ -39,6 +39,11 @@ public class MainActivity extends BaseActivity {
             {SpinnerLoadingActivity.class},
             {NoBoringActionBarActivity.class},
             {LikeButtonActivity.class},
+            {HuahuabanActivity.class},
+            {hhActivity.class},
+            {MyCircleActivity.class},
+            {StickedActivity.class},
+//            {DynamicListbbActivity.class},
 
     };
 

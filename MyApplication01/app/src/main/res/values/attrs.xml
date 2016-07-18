@@ -15,42 +15,86 @@
     </declare-styleable>
     <declare-styleable name="RippleBackground">
         <attr name="rb_color" format="color" />
-        <attr name="rb_strokeWidth" format="dimension"/>
-        <attr name="rb_radius" format="dimension"/>
-        <attr name="rb_duration" format="integer"/>
-        <attr name="rb_rippleAmount" format="integer"/>
-        <attr name="rb_scale" format="float"/>
+        <attr name="rb_strokeWidth" format="dimension" />
+        <attr name="rb_radius" format="dimension" />
+        <attr name="rb_duration" format="integer" />
+        <attr name="rb_rippleAmount" format="integer" />
+        <attr name="rb_scale" format="float" />
         <attr name="rb_type" format="enum">
-            <enum name="fillRipple" value="0"/>
-            <enum name="strokeRipple" value="1"/>
+            <enum name="fillRipple" value="0" />
+            <enum name="strokeRipple" value="1" />
         </attr>
     </declare-styleable>
 
     <declare-styleable name="MaterialTextField">
-        <attr name="mtf_cardCollapsedHeight" format="dimension"/>
-        <attr name="mtf_labelColor" format="color"/>
-        <attr name="mtf_image" format="reference"/>
-        <attr name="mtf_hasFocus" format="boolean"/>
-        <attr name="mtf_animationDuration" format="integer"/>
-        <attr name="mtf_openKeyboardOnFocus" format="boolean"/>
+        <attr name="mtf_cardCollapsedHeight" format="dimension" />
+        <attr name="mtf_labelColor" format="color" />
+        <attr name="mtf_image" format="reference" />
+        <attr name="mtf_hasFocus" format="boolean" />
+        <attr name="mtf_animationDuration" format="integer" />
+        <attr name="mtf_openKeyboardOnFocus" format="boolean" />
     </declare-styleable>
 
     <declare-styleable name="SpinnerLoading">
-        <attr name="circle_color" format="color"/>
-        <attr name="circle_color_move" format="color"/>
+        <attr name="circle_color" format="color" />
+        <attr name="circle_color_move" format="color" />
     </declare-styleable>
     <declare-styleable name="LikeButton">
         <attr name="icon_type" format="string" />
-        <attr name="icon_size" format="dimension|reference"/>
+        <attr name="icon_size" format="dimension|reference" />
         <attr name="like_drawable" format="reference" />
         <attr name="unlike_drawable" format="reference" />
         <attr name="dots_primary_color" format="color|reference" />
         <attr name="dots_secondary_color" format="color|reference" />
         <attr name="circle_start_color" format="color|reference" />
         <attr name="circle_end_color" format="color|reference" />
-        <attr name="liked" format="boolean"/>
-        <attr name="is_enabled" format="boolean"/>
-        <attr name="anim_scale_factor" format="float"/>
+        <attr name="liked" format="boolean" />
+        <attr name="is_enabled" format="boolean" />
+        <attr name="anim_scale_factor" format="float" />
+    </declare-styleable>
+
+
+    <declare-styleable name="MyCircleImageView">
+        <attr name="borderRadius" format="dimension" />
+        <attr name="type">
+            <enum name="circle" value="0" />
+            <enum name="round" value="1" />
+        </attr>
+        <attr name="src" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="StickyListHeadersListView">
+        <attr name="stickyListHeadersListViewStyle" format="reference"/>
+
+        <!-- View attributes -->
+        <attr name="android:clipToPadding" />
+        <attr name="android:scrollbars" />
+        <attr name="android:overScrollMode" />
+        <attr name="android:padding" />
+        <attr name="android:paddingLeft" />
+        <attr name="android:paddingTop" />
+        <attr name="android:paddingRight" />
+        <attr name="android:paddingBottom" />
+
+        <!-- ListView attributes -->
+        <attr name="android:fadingEdgeLength" />
+        <attr name="android:requiresFadingEdge" />
+        <attr name="android:cacheColorHint" />
+        <attr name="android:choiceMode" />
+        <attr name="android:drawSelectorOnTop" />
+        <attr name="android:fastScrollEnabled" />
+        <attr name="android:fastScrollAlwaysVisible" />
+        <attr name="android:listSelector" />
+        <attr name="android:scrollingCache" />
+        <attr name="android:scrollbarStyle" />
+        <attr name="android:divider" />
+        <attr name="android:dividerHeight" />
+        <attr name="android:transcriptMode" />
+        <attr name="android:stackFromBottom" />
+
+        <!-- StickyListHeaders attributes -->
+        <attr name="hasStickyHeaders" format="boolean" />
+        <attr name="isDrawingListUnderStickyHeader" format="boolean" />
     </declare-styleable>
 
 </resources>

@@ -60,4 +60,9 @@
     <color name="main">#63C3FF</color>
     <color name="actionbar_title_color">@android:color/white</color>
 
+
+    <color name="header_normal">#ffe74c3c</color>
+    <color name="header_pressed">#ffc0392b</color>
+    <color name="menu_section_header">#FFDDDDDD</color>
+
 </resources>

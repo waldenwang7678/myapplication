@@ -36,7 +36,6 @@ public class LoginActivity extends Activity implements View.OnClickListener {
         pwd = (EditText) findViewById(R.id.pwd);
         findViewById(R.id.login).setOnClickListener(this);
         findViewById(R.id.register).setOnClickListener(this);
-        findViewById(R.id.register).setOnClickListener(this);
     }
 
     @Override

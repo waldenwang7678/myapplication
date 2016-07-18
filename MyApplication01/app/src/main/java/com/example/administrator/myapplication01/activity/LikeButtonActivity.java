@@ -37,7 +37,7 @@ public class LikeButtonActivity extends AppCompatActivity implements OnLikeListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_like_button);
         ButterKnife.bind(this);
         setSupportActionBar(toolbar);
 
