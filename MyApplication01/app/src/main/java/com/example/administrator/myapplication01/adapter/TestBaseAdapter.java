@@ -31,6 +31,7 @@ public class TestBaseAdapter extends BaseAdapter implements
         mSectionLetters = getSectionLetters();
     }
 
+    //首字母变化的位置
     private int[] getSectionIndices() {
         ArrayList<Integer> sectionIndices = new ArrayList<Integer>();
         char lastFirstChar = mCountries[0].charAt(0);
@@ -48,6 +49,7 @@ public class TestBaseAdapter extends BaseAdapter implements
         return sections;
     }
 
+    //首字母变化单词的首字母
     private Character[] getSectionLetters() {
         Character[] letters = new Character[mSectionIndices.length];
         for (int i = 0; i < mSectionIndices.length; i++) {
